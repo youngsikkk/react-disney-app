@@ -84,7 +84,7 @@ const SignUpLink = styled.a`
   border: 1ox solid transparent;
   border-radius: 4px;
 
-  &;:hover {
+  &:hover {
     background-color: #0483ee;
   }
 `;

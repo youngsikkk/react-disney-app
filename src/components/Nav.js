@@ -71,6 +71,8 @@ const Nav = () => {
       <Logo>
         <img alt="Disiney Plus Logo" src="/images/logo.svg" onClick={()=>{window.location.href = "/"}}/>
       </Logo>
+      {userData ?
+        <div>
       {pathname === "/" ? (<Login onClick={handleAuth}>Login</Login>) : 
       <>
         <Input
@@ -81,12 +83,17 @@ const Nav = () => {
           placeholder='검색해주세요'
           />
       </>}
-      <SignOut>
+      </div> 
+       :
+      <div>
+       <SignOut>
         <UserImg src = {userData.photoURL} alt={userData.displayName}/>
         <DropDown>
           <span onClick={handleSignOut}>SignOut</span>
         </DropDown>
-      </SignOut>
+       </SignOut>
+      </div>
+      }
     </NavWapper>
   )
 }
